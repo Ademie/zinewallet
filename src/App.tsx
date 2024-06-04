@@ -1,6 +1,7 @@
 import { ChartSection } from "./components/ChartSection";
 import { Investment } from "./components/Investment";
 import { ShowCase } from "./components/Showcase";
+import { FeaturesSection } from "./components/FeaturesSection";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <ShowCase />
       <ChartSection/>
       <Investment/>
+      <FeaturesSection/>
     </div>
   );
 }
