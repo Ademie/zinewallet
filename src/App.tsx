@@ -1,7 +1,11 @@
-import { Header } from "./components/Header"
+import { ShowCase } from "./components/Showcase";
 
 function App() {
-  return <Header />
+  return (
+    <div>
+      <ShowCase />
+    </div>
+  );
 }
 
-export default App
+export default App;

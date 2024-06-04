@@ -10,6 +10,7 @@ import {
   MenuItem,
   MenuList,
   Button,
+  Flex,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -27,34 +28,44 @@ const items = [
 export function Header() {
   const [value, setValue] = React.useState("");
   return (
-    <Box p={20}>
-      <HStack spacing={"3rem"}>
-        <Link _hover={{ textDecoration: "none" }}>
-          <HStack>
-            <Text fontSize={"26.38px"} fontWeight={"31.25em"}>
-              Zine
-            </Text>
-            <Image src={"src/assets/png/logo.png"} alt="zine" sizes="" />
+    <Box
+      px={"5rem"}
+      py={"1.5rem"}
+      borderBottom={"1px"}
+      borderBottomColor={"gray.200"}
+    >
+      {/* LEFT */}
+      <HStack>
+        <Flex flex={2}>
+          <Link _hover={{ textDecoration: "none" }}>
+            <HStack spacing={".5rem"}>
+              <Text fontSize={"26.38px"} fontWeight={"31.25em"}>
+                Zine
+              </Text>
+              <Image src={"src/assets/png/logo.png"} alt="zine" sizes="" />
+            </HStack>
+          </Link>
+          <HStack ml={"3rem"}>
+            <Link _hover={{ textDecor: "none" }}>
+              <Text fontSize={"16px"} mr={"3rem"}>
+                About us
+              </Text>
+            </Link>
+            <Link _hover={{ textDecor: "none" }}>
+              <Text fontSize={"16px"}>Contact</Text>
+            </Link>
           </HStack>
-        </Link>
-        <HStack>
-          <Link _hover={{ textDecor: "none" }}>
-            <Text fontSize={"16px"} mr={"3rem"}>
-              About us
-            </Text>
-          </Link>
-          <Link _hover={{ textDecor: "none" }}>
-            <Text fontSize={"16px"}>Contact</Text>
-          </Link>
-        </HStack>
+        </Flex>
+        {/* RIGHT */}
+        <Flex flex={1}>
+          <DropDown
+            items={items}
+            onChange={(newValue) => setValue(newValue)}
+            value={value}
+          />
+          <Button ml={"3rem"}>Get Started</Button>
+        </Flex>
       </HStack>
-      <Box>
-        <DropDown
-          items={items}
-          onChange={(newValue) => setValue(newValue)}
-          value={value}
-        />
-      </Box>
     </Box>
   );
 }
