@@ -1,13 +1,6 @@
-import {
-  Box,
-  Button,
-  HStack,
-  Text,
-  VStack,
-  Image,
-  Link,
-} from "@chakra-ui/react";
+import { Box, Text, VStack, Image } from "@chakra-ui/react";
 import { Header } from "./Header";
+import { DownloadButtons } from "../shared/DownloadButtons";
 
 export function ShowCase() {
   return (
@@ -34,36 +27,7 @@ export function ShowCase() {
           Zine - The only Financial App you will ever need
         </Text>
         {/* DOWNLOAD BUTTONS */}
-        <HStack>
-          <Link href="https://play.google.com/store" isExternal>
-            <Button
-              as="div"
-              bg="black"
-              _hover={{ bg: "gray.700" }}
-              borderRadius="md"
-              p={0}
-            >
-              <Image
-                src="src/assets/svg/google.svg"
-                alt="Download on App Store"
-              />
-            </Button>
-          </Link>
-          <Link href="https://apps.apple.com" isExternal>
-            <Button
-              as="div"
-              bg="black"
-              _hover={{ bg: "gray.700" }}
-              borderRadius="md"
-              p={0}
-            >
-              <Image
-                src="src/assets/svg/apple.svg"
-                alt="Download on App Store"
-              />
-            </Button>
-          </Link>
-        </HStack>
+        <DownloadButtons />
 
         {/* PHONE IMAGE */}
 
