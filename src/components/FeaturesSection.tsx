@@ -2,7 +2,7 @@ import { Box, Flex, VStack, Image, Text, HStack, Card } from "@chakra-ui/react";
 
 export function FeaturesSection() {
   return (
-    <Box bg="#f41fe" px={"8rem"} py={"4rem"}>
+    <Box bg="#f41fe" px={"5.7rem"} py={"4rem"}>
       <HStack>
         {/* LEFT */}
         <Flex>

@@ -3,7 +3,7 @@ import TradingViewWidget from "./TradeChart";
 
 export function Investment() {
   return (
-    <Box bg="#f41fe" p={"8rem"}>
+    <Box bg="#f41fe" p={"8rem"} px={"5.7rem"}>
       <HStack spacing={35}>
         {/* LEFT */}
         <Flex flex={2}>
