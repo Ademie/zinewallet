@@ -5,6 +5,7 @@ import { FeaturesSection } from "./components/FeaturesSection";
 import { ContactSection } from "./components/ContactSection";
 import { DownloadSection } from "./components/DownloadSection";
 import { Faqs } from "./components/Faqs";
+import { BottomSection } from "./components/BottomSection";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <ContactSection />
       <DownloadSection />
       <Faqs />
+      <BottomSection />
     </div>
   );
 }
