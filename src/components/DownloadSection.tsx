@@ -21,7 +21,7 @@ export function DownloadSection() {
             <Text
               lineHeight={"38px"}
               fontSize={"32px"}
-              fontWeight={"600"}
+              fontWeight={"550"}
               color={"#360995"}
               mb={5}
             >

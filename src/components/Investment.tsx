@@ -6,7 +6,7 @@ export function Investment() {
     <Box bg="#f41fe" p={"8rem"} px={"5.7rem"}>
       <HStack spacing={35}>
         {/* LEFT */}
-        <Flex flex={2}>
+        <Flex flex={1.5}>
           <Box
             borderRadius={10}
             border={"1px"}
@@ -17,13 +17,13 @@ export function Investment() {
           >
             <Text
               lineHeight={"48px"}
-              fontWeight={700}
-              fontSize={"20px"}
-              mb={"1.5rem"}
+              fontWeight={550}
+              fontSize={"24px"}
+              mb={"1rem"}
             >
               Invest in Stable Asset
             </Text>
-            <Text fontSize={"20px"} lineHeight={"22.4px"} color={"#667085"}>
+            <Text fontSize={"21px"} lineHeight={"28px"} color={"#667085"} pr={"7%"} fontWeight={300}>
               In an ever-changing economic environment, Zine wallet becomes your
               safeguard against the uncertainties. Our revolutionary feature
               allows you to invest in solid assets like stable coins, which
@@ -32,7 +32,7 @@ export function Investment() {
           </Box>
         </Flex>
         {/* RIGHT */}
-        <Flex flex={3}>
+        <Flex flex={2}>
           <Box
             bg={"#fcf4f3"}
             borderRadius={10}
@@ -43,10 +43,10 @@ export function Investment() {
           >
             <Text
               mb={"1.5rem"}
-              fontSize={"20px"}
-              fontWeight={700}
+              fontSize={"22px"}
+              fontWeight={600}
               lineHeight={"33.6px"}
-              width="80%"
+              width="100%"
             >
               See how your favorite cryptocurrencies have performed overtime.
             </Text>
@@ -70,17 +70,19 @@ export function Investment() {
               <Image src={"src/assets/svg/phone.svg"} alt="phone"></Image>
             </Box>
           </Flex>
-          <Flex flex={2} flexDirection={"column"} mb={"12rem"}>
+          <Flex flex={2} flexDirection={"column"} mb={"12rem"} ml={
+            "3rem"
+          }>
             <Text
               mb={"1.5rem"}
-              fontSize={"20px"}
-              fontWeight={700}
-              lineHeight={"33.6px"}
-              width="80%"
+              fontSize={"23px"}
+              fontWeight={600}
+              lineHeight={"48px"}
+              width="auto"
             >
               Set Automatic Purchase At A Time Set By “You”
             </Text>
-            <Text fontSize={"20px"} lineHeight={"22.4px"} color={"#667085"}>
+            <Text fontSize={"20px"} lineHeight={"28px"} color={"#667085"} pr={"5%"}>
               In case you are like me, who forget to eat breakfast sometimes,
               then do not worry about your investment because we have got you
               covered. Your stable coin is automatically purchased at the time

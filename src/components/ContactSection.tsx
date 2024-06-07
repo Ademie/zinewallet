@@ -10,25 +10,27 @@ import {
   Button,
 } from "@chakra-ui/react";
 
+import "/styles.css";
+
 export function ContactSection() {
   return (
-    <Box bg={"#F5F1FE"} px={"5.7rem"} py={"120px"}>
+    <Box bg={"#F5F1FE"} px={"5.7rem"} pt={"120px"} pb={"50px"}>
       {/* TOP */}
 
       <HStack spacing={0} pb={"120px"}>
         {/* left */}
-        <Flex flex={1}>
+        <Flex flex={1.8}>
           <Box
             borderTopLeftRadius={"20px"}
             borderBottomLeftRadius={"20px"}
             bgImage={"src/assets/png/woman.png"}
             bgSize={"cover"}
             h={"650px"}
-            w={"440px"}
+            width={"100%"}
           ></Box>
         </Flex>
         {/* right */}
-        <Flex flex={2}>
+        <Flex flex={2.5}>
           <Box
             bg={"#895eed"}
             borderTopRightRadius={"20px"}
@@ -43,7 +45,6 @@ export function ContactSection() {
                 lineHeight={"48px"}
                 fontWeight={"bold"}
                 color={"white"}
-                pr={"12%"}
               >
                 Promoting Economic Empowerment in Africa Through Crypto
                 Adoption.
@@ -107,7 +108,7 @@ export function ContactSection() {
                   focusBorderColor="gray.100"
                   color={"black"}
                   placeholder="First Name"
-                  width={"600px"}
+                  
                 />
               </FormControl>
 
@@ -154,9 +155,10 @@ export function ContactSection() {
                 color={"white"}
                 size="lg"
                 mt={4}
-                width={"600px"}
+                width={"699.85px"}
+                borderRadius={"10px"}
               >
-                <Text fontWeight={100}>Submit</Text>
+                <Text fontWeight={100} >Submit</Text>
               </Button>
             </VStack>
           </Flex>

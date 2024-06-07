@@ -1,0 +1,131 @@
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  z-index: 1000;
+  background-color: inherit;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sticky-navbar.scrolled {
+  background-color: white;
+  border-bottom: 1px solid #a0aec006;
+}
+
+.sticky-navbar .zine-logo {
+  color: white;
+  transition: color 0.3s;
+}
+
+.sticky-navbar.scrolled .zine-logo {
+  color: black;
+}
+
+.sticky-navbar .nav-link {
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.sticky-navbar.scrolled .nav-link {
+  color: #7d8793;
+}
+
+.sticky-navbar .dropdown {
+  border: 1px solid white;
+  transition: border-color 0.3s;
+}
+
+.sticky-navbar.scrolled .dropdown {
+  border-color: #a0aec0;
+  color: #a0aec0;
+}
+
+
+
+.container {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1216px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+
+@media only screen and (min-width: 1408px) {
+  .container {
+    max-width: 1344px;
+  }
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #667085;
+}
+
+input,
+select,
+textarea {
+  outline: none !important;
+  background-color: #ffffff !important;
+  width: 699.85px !important;
+  border-radius: 10px !important;
+}
+
+input {
+  height: 46px !important;
+}
+
+.scBg {
+  background-color: #fff !important;
+}
+
+.szh-accordion__item {
+  width: 100%;
+  box-shadow: 0px 12px 24px -4px #919eab1f;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.szh-accordion__item-heading {
+  width: 100%;
+}
+
+.szh-accordion__item-btn {
+  width: 100%;
+  outline: none;
+}
+
+.szh-accordion__item-panel {
+  color: #5c6f7f;
+  font-size: 16px;
+  line-height: 30px;
+  padding-top: 10px;
+}
+
+.szh-accordion__item-content {
+  transition: height 0.3s cubic-bezier(0, 0, 0, 1);
+}
+
+.itemBtnExpanded .btnIcon1 {
+  display: none;
+}
+
+.notItemBtnExpanded .btnIcon2 {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .szh-accordion__item-panel {
+    line-height: 22.4px !important;
+  }
+}

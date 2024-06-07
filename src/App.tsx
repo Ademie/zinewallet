@@ -6,10 +6,12 @@ import { ContactSection } from "./components/ContactSection";
 import { DownloadSection } from "./components/DownloadSection";
 import { Faqs } from "./components/Faqs";
 import { BottomSection } from "./components/BottomSection";
+import { Header } from "./components/Header";
 
 function App() {
   return (
-    <div>
+    <div >
+      <Header />
       <ShowCase />
       <ChartSection />
       <Investment />

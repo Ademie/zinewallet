@@ -5,14 +5,14 @@ export function FeaturesSection() {
     <Box bg="#f41fe" px={"5.7rem"} py={"4rem"}>
       <HStack>
         {/* LEFT */}
-        <Flex>
+        <Flex flex={1}>
           <Box
-            mt={35}
+            mt={34}
             mr={25}
-            w={600}
             h={750}
             borderRadius={10}
             p={10}
+            w={"100%"}
             bgImage={"src/assets/png/mini-bg.png"}
             bgRepeat={"no-repeat"}
             bgSize={"cover"}
@@ -43,11 +43,12 @@ export function FeaturesSection() {
           </Box>
         </Flex>
         {/* RIGHT */}
-        <VStack>
+
+        <Flex flexDirection={"column"}>
           {/* top */}
           <Box
             mt={35}
-            w={550}
+            w={580}
             h={400}
             borderRadius={10}
             p={10}
@@ -86,8 +87,8 @@ export function FeaturesSection() {
           {/* bottom */}
           <Box
             mt={35}
-            w={550}
-            h={300}
+            w={580}
+            h={310}
             borderRadius={10}
             p={10}
             bgImage={"src/assets/png/mini-bg3.png"}
@@ -104,7 +105,7 @@ export function FeaturesSection() {
                 >
                   Sell your Crypto and Get Naira in Seconds
                 </Text>
-                <Text fontSize={"15px"} color={"white"} w={"80%"}>
+                <Text fontSize={"15px"} color={"white"} w={"90%"}>
                   Convert your crypto holdings into naira or other assets
                   easily. Sell your crypto assets and get your fiat equivalence
                   in your wallet immediately
@@ -117,7 +118,7 @@ export function FeaturesSection() {
               ></Image>
             </HStack>
           </Box>
-        </VStack>
+        </Flex>
       </HStack>
 
       {/* FEES */}
@@ -125,19 +126,19 @@ export function FeaturesSection() {
         mt={"8rem"}
         bg={"#eff5fa"}
         borderRadius={10}
-        p={10}
+        p={6}
         border={"1px"}
         borderColor={"#cddfef"}
       >
         <HStack>
-          <Flex flex={1}>
+          <Flex flex={1.5}>
             <Image src={"src/assets/png/man.png"} alt="man"></Image>
           </Flex>
 
-          <Flex flex={2} flexDirection={"column"} ml={"3rem"}>
+          <Flex flex={2.5} flexDirection={"column"} ml={"3rem"}>
             <VStack alignItems={"flex-start"} justifyItems={"center"}>
               <HStack>
-                <Image src={"src/assets/png/zeus.png"} alt="man"></Image>
+                <Image src={"src/assets/png/zeus.png"} alt="zeus"></Image>
                 <Card
                   py={"0.5rem"}
                   px={"1.5rem"}
@@ -151,15 +152,14 @@ export function FeaturesSection() {
                 </Card>
               </HStack>
               <Text
-                mb={"1.5rem"}
-                fontSize={"22px"}
-                fontWeight={700}
+                my={"1.5rem"}
+                fontSize={"24px"}
+                fontWeight={600}
                 lineHeight={"33.6px"}
-                width="80%"
               >
                 Fast and Zero Transaction Fees amongst Zine Users
               </Text>
-              <Text fontSize={"20px"} lineHeight={"22.4px"} color={"#667085"}>
+              <Text fontSize={"21px"} lineHeight={"28px"} color={"#667085"}>
                 Tired of transaction fees and network delays? Zine Wallet
                 eliminates these headaches by allowing you to send money to
                 other zine users swiftly and with zero transaction fees.

@@ -10,11 +10,11 @@ const cryptoData = [
 
 const CryptoPriceTable = () => {
   return (
-    <Box bg={"#ffffff"} boxShadow={"md"} p={5} w={500} h={400} borderRadius={10}>
-      <Table variant="simple">
+    <Box bg={"#ffffff"} boxShadow={"md"} p={5}  borderRadius={10} width={550}>
+      <Table>
         <Tbody>
           {cryptoData.map((coin) => (
-            <Tr key={coin.name}>
+            <Tr key={coin.name} h={75}>
               <Td>{coin.name}</Td>
               <Td isNumeric>
                 $

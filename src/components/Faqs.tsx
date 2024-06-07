@@ -98,8 +98,8 @@ function CustomAccordion() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4} color={"#5c6f7f"}>
-            You can trade a variety of cryptocurrencies on Zine Wallet,
-            including Bitcoin, Ethereum, Litecoin, and more.
+            With Zine Wallet, you can trade a wide range of cryptocurrencies,
+            including Bitcoin, Ethereum, and many other altcoins.
           </AccordionPanel>
         </AccordionItem>
 
@@ -120,9 +120,10 @@ function CustomAccordion() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4} color={"#5c6f7f"}>
-            Zine Wallet uses advanced security measures, including encryption
-            and two-factor authentication, to ensure the safety of your digital
-            assets.
+            Security is our top priority at Zine Wallet. We employ advanced
+            encryption and security protocols to ensure the safety of your
+            assets and personal information. Additionally, we continuously
+            update our security measures to stay ahead of emerging threats.
           </AccordionPanel>
         </AccordionItem>
 
@@ -143,8 +144,9 @@ function CustomAccordion() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4} color={"#5c6f7f"}>
-            Yes, Zine Wallet allows you to set up automatic purchases at regular
-            intervals.
+            Yes, Zine Wallet allows you to set up automatic purchases at a time
+            determined by you. This feature enables you to invest in stable
+            currencies effortlessly, even if you have a busy schedule.
           </AccordionPanel>
         </AccordionItem>
 
@@ -165,7 +167,82 @@ function CustomAccordion() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4} color={"#5c6f7f"}>
-            Yes, you can easily send money to other Zine Wallet users.
+            Yes, Zine Wallet enables fast and secure money transfers between
+            users with zero transaction fees. Whether you're splitting a bill or
+            sending funds to a friend, our platform ensures a seamless and
+            hassle-free experience.
+          </AccordionPanel>
+        </AccordionItem>
+
+        <AccordionItem
+          border={0}
+          mb={"20px"}
+          bg={"white"}
+          p={"20px"}
+          boxShadow={"lg"}
+          borderRadius={"16px"}
+        >
+          <h2>
+            <AccordionButton _hover={{ bg: "ffffff" }}>
+              <Box flex="1" textAlign="left" fontSize={"20px"}>
+                How can I get started with Zine wallet?
+              </Box>
+              <CustomAccordionIcon />
+            </AccordionButton>
+          </h2>
+          <AccordionPanel pb={4} color={"#5c6f7f"}>
+            Getting started with Zine Wallet is easy. Simply download our mobile
+            application from the App Store or Google Play Store, create an
+            account, and start exploring the world of cryptocurrency trading and
+            fast money transfer.
+          </AccordionPanel>
+        </AccordionItem>
+
+        <AccordionItem
+          border={0}
+          mb={"20px"}
+          bg={"white"}
+          p={"20px"}
+          boxShadow={"lg"}
+          borderRadius={"16px"}
+        >
+          <h2>
+            <AccordionButton _hover={{ bg: "ffffff" }}>
+              <Box flex="1" textAlign="left" fontSize={"20px"}>
+                Is customer support availabel on Zine wallet?
+              </Box>
+              <CustomAccordionIcon />
+            </AccordionButton>
+          </h2>
+          <AccordionPanel pb={4} color={"#5c6f7f"}>
+            Yes, our dedicated customer support team is available to assist you
+            with any questions or concerns you may have. You can reach out to us
+            through the support page or on the mobile, and we'll be happy to
+            help.
+          </AccordionPanel>
+        </AccordionItem>
+
+        <AccordionItem
+          border={0}
+          mb={"20px"}
+          bg={"white"}
+          p={"20px"}
+          boxShadow={"lg"}
+          borderRadius={"16px"}
+        >
+          <h2>
+            <AccordionButton _hover={{ bg: "ffffff" }}>
+              <Box flex="1" textAlign="left" fontSize={"20px"}>
+                How many countries does Zine wallet operate in?
+              </Box>
+              <CustomAccordionIcon />
+            </AccordionButton>
+          </h2>
+          <AccordionPanel pb={4} color={"#5c6f7f"}>
+            Zine Wallet is available to users in Nigeria and Cote D’Ivoire
+            allowing individuals from different regions to access our platform
+            and take advantage of its features for cryptocurrency trading and
+            financial management.
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
