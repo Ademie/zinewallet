@@ -4,13 +4,16 @@ import { DownloadButtons } from "../shared/DownloadButtons";
 
 export function ShowCase() {
   return (
-    <div style={{ position: "absolute", top: 0, left: 0, right: 0 }}>
+    <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom:0 }}>
       <Box
+        display={"block"}
         bgImage={"src/assets/png/bg.png"}
         h={"57.3rem"}
+        w={"100%"}
         bgSize={"cover"}
         bgPosition={"center"}
         bgAttachment={"scroll"}
+        justifyContent={"center"}
         bgRepeat="no-repeat"
       >
         <VStack spacing={"5.5rem"} pt={"10.2rem"}>

@@ -1,3 +1,8 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+}
 .sticky-navbar {
   position: sticky;
   top: 0;
@@ -31,8 +36,8 @@
 }
 
 .sticky-navbar .dropdown {
-  border: 1px solid white;
-  transition: border-color 0.3s;
+  /* border: 1px solid white;*/
+  transition: border-color 0.3s; 
 }
 
 .sticky-navbar.scrolled .dropdown {

@@ -5,20 +5,17 @@ import {
   Text,
   Image,
   Button,
-  Flex,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
+  IconButton,
 } from "@chakra-ui/react";
-import { ChevronDownIcon } from "@chakra-ui/icons";
-import React from "react";
-
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import React, { useState } from "react";
 import "/styles.css";
+import { DropDown, items } from "./Dropdown";
 
 export function Header() {
-  const [value, setValue] = React.useState("");
-  const [scrolled, setScrolled] = React.useState(false);
+  const [value, setValue] = useState("");
+  const [display, changeDisplay] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -34,9 +31,11 @@ export function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div className={`sticky-navbar ${scrolled ? "scrolled" : ""}`}>
       <Box
+        h={["50px", "50px", "80px"]}
         display={"flex"}
         width={"100%"}
         justifyContent={"center"}
@@ -45,7 +44,7 @@ export function Header() {
         borderBottomColor={"#F2F4F724"}
       >
         <Box
-          px={"3%"}
+          px={["0", "0", "3%"]}
           width={"93%"}
           display={"flex"}
           justifyContent={"space-between"}
@@ -55,7 +54,10 @@ export function Header() {
           <Box display={"flex"} alignItems={"center"}>
             <Link _hover={{ textDecoration: "none" }} className="zine-logo">
               <HStack spacing={".5rem"}>
-                <Text fontSize={"26.38px"} fontWeight={"bold"}>
+                <Text
+                  fontSize={["22px", "22px", "26.38px"]}
+                  fontWeight={"bold"}
+                >
                   Zine
                 </Text>
                 <Image
@@ -65,7 +67,13 @@ export function Header() {
                 />
               </HStack>
             </Link>
-            <HStack ml={"3rem"} color={"white"} spacing={"3rem"}>
+
+            <HStack
+              ml={"3rem"}
+              color={"white"}
+              spacing={"3rem"}
+              display={["none", "none", "flex", "flex"]}
+            >
               <Link _hover={{ textDecoration: "none" }} className="nav-link">
                 <Text fontSize={"16px"}>About us</Text>
               </Link>
@@ -75,7 +83,22 @@ export function Header() {
             </HStack>
           </Box>
           {/* RIGHT */}
-          <Box display={"flex"} alignItems={"center"}>
+          <IconButton
+            aria-label={display ? "Close Menu" : "Open Menu"}
+            background={"transparent"}
+            _hover={{ background: "transparent" }}
+            size="lg"
+            icon={
+              display ? (
+                <CloseIcon color={"white"} fontSize={"16px"} />
+              ) : (
+                <HamburgerIcon color={"white"} fontSize={"25px"} />
+              )
+            }
+            onClick={() => changeDisplay(!display)}
+            display={["flex", "flex", "none", "none"]}
+          />
+          <Box display={["none", "none", "flex", "flex"]} alignItems={"center"}>
             <DropDown
               items={items}
               onChange={(newValue) => setValue(newValue)}
@@ -87,77 +110,73 @@ export function Header() {
           </Box>
         </Box>
       </Box>
+
+      {/* Hamburger Menu Popup */}
+
+      <Box
+        mt={"50px"}
+        position="fixed"
+        top={display ? "0" : "-100%"}
+        left="0"
+        width="100%"
+        bg="white"
+        display="flex"
+        flexDirection="column"
+        zIndex="20"
+        transition="top 0.3s ease-in-out"
+        py={10}
+      >
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="flex-start"
+          px={6}
+        >
+          <Link
+            _hover={{ textDecoration: "none" }}
+            className="nav-link"
+            borderBottom={"1px"}
+            borderColor={"#a0aec0"}
+            onClick={() => changeDisplay(false)}
+            w={"100%"}
+          >
+            <Text fontSize={"16px"} color={"#a0aec0"} mb={"1rem"}>
+              About us
+            </Text>
+          </Link>
+          <Link
+            _hover={{ textDecoration: "none" }}
+            className="nav-link"
+            borderBottom={"1px"}
+            borderColor={"#a0aec0"}
+            onClick={() => changeDisplay(false)}
+            w={"100%"}
+          >
+            <Text fontSize={"16px"} color={"#a0aec0"} my={"1rem"}>
+              Contact
+            </Text>
+          </Link>
+          <Box alignItems={"center"} mt={"20px"}>
+            <DropDown
+              borderColor="#a0aec0"
+              items={items}
+              onChange={(newValue) => setValue(newValue)}
+              value={value}
+            />
+            <Button
+              mt={"15px"}
+              bg={"black"}
+              h={"45px"}
+              minW={"410px"}
+              w={"100%"}
+              color={"white"}
+              _hover={{ bg: "#333" }}
+            >
+              Get Started
+            </Button>
+          </Box>
+        </Box>
+      </Box>
     </div>
   );
 }
-
-interface CustomSelect {
-  items: {
-    value: any;
-    label: string;
-    imageUrl: string;
-  }[];
-  value: any;
-  placeholder?: string;
-  onChange: (newValue: any) => void;
-}
-
-const items = [
-  {
-    label: "Nigeria",
-    value: "Nigeria",
-    imageUrl: "src/assets/png/nigeria.png",
-  },
-  {
-    label: "Côrte d'Ivoire",
-    value: "Côrte d'Ivoire",
-    imageUrl: "src/assets/png/ivory.png",
-  },
-];
-
-const DropDown = (props: CustomSelect) => {
-  const selectedItem =
-    props.items.find((x) => x.value === props.value) || props.items[0];
-
-  return (
-    <Menu autoSelect={true}>
-      <MenuButton
-        as={Button}
-        rightIcon={<ChevronDownIcon />}
-        bg={"transparent"}
-        border={"1px"}
-        borderColor={"white"}
-        className="dropdown"
-        color={"white"}
-        fontWeight={"400"}
-        fontSize={"14px"}
-        _hover={{
-          bg: "transparent",
-        }}
-        display={"flex"}
-        alignItems={"center"}
-      >
-        <Flex alignItems={"center"}>
-          <img
-            src={selectedItem.imageUrl}
-            alt=""
-            style={{ marginRight: "8px", width: "30px", height: "20px" }}
-          />
-          {selectedItem.label}
-        </Flex>
-      </MenuButton>
-      <MenuList>
-        {props.items.map((item, key) => (
-          <MenuItem key={key} onClick={() => props.onChange(item.value)}>
-            <img
-              src={item.imageUrl}
-              alt=""
-              style={{ marginRight: "8px", width: "20px", height: "15px" }}
-            />
-            {item.label}
-          </MenuItem>
-        ))}
-      </MenuList>
-    </Menu>
-  );
-};
